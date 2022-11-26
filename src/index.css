@@ -1,0 +1,25 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.light-text{
+    color: rgba(78, 78, 78, 0.863);
+}
+
+
+.App{
+    height: 100vh;
+}
+
+
+.link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon{
+    cursor: pointer;
+}
