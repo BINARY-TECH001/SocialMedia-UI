@@ -1,14 +1,20 @@
 import React, { useContext } from 'react'
 import './login.scss'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../context/authContext'
+
 
 const Login = () => {
   const { login } = useContext(AuthContext)
-
-  const handleLogin = (e)=>{
-    e.preventDefault();
-    login();
+  const navigate = useNavigate()
+  const handleLogin = async (e)=>{
+   e.preventDefault();
+    try {
+      await login(); // Assuming login is an async function
+      navigate('/home'); // Redirect to /home after successful login
+    } catch (error) {
+      console.error("Login failed: ", error); // Handle login errors if any
+    }
   }
 
   return (
