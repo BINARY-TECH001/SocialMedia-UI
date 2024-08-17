@@ -11,7 +11,7 @@ const Login = () => {
    e.preventDefault();
     try {
       await login(); // Assuming login is an async function
-      navigate('/home'); // Redirect to /home after successful login
+      navigate('/'); // Redirect to /home after successful login
     } catch (error) {
       console.error("Login failed: ", error); // Handle login errors if any
     }
